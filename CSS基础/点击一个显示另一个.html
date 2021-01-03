@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+*{
+    margin: 0;
+}
+        .box{
+            width:100px;
+            height: 100px;
+            background-color: #9E5200;
+            position: relative;
+
+        }
+        .box:before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            /*background-color: red;*/
+            position: absolute;
+            left: 100px;
+            display: none;
+
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid darkorange;
+            border-right: 50px solid transparent;
+
+        }
+        .box:hover:before{
+            display: block;
+        }
+        .box:after{
+            /*!*content: '后面';*!*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: palegreen;*/
+            /*display: block; ;*/
+
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+
+</body>
+</html>

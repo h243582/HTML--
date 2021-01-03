@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var goods = new Array();
+    goods[0] = "2213";
+    goods[1] = "HHH";
+    document.writeln(goods);
+    console.log(goods);
+
+    var movies = new Array("分歧者2:绝地反击", "疯狂的麦克斯：狂暴之路",
+        "复仇者联盟2:奥创纪元", "飓风营救4");
+    if (movies.constructor == String) {
+        alert("movies是个字符串对象");
+    } else if (movies.constructor == Array) {
+        alert("movies是个数组对象，数组中元素的个数是：" + movies.length
+            + "\n------------------------\n" + movies.constructor);
+    } else if (movies.constructor == Date) {
+        alert("movies是个日期对象");
+    }
+    var strs = goods.concat(movies);
+    document.writeln(strs);
+
+</script>
+<p>----------------</p>
+<script>
+    var movies=new Array("绝地反击","狂暴之路","奥创纪元","飓风营救");
+    var newMovie="何以笙箫默";
+    var hotMovies= movies.concat(newMovie);
+    //使用join方法将数组显示出来
+    function showMoviesByJoin(movies,description){
+        document.write(description+"：<hr/>\t");
+        //元素间使用下划线“_”进行间隔
+        document.write(movies.join("_"));
+    }
+
+
+</script>
+</body>
+</html>

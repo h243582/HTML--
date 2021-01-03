@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            border: #9E5200 solid 2px;
+            margin: 20px;
+        }
+        .box.red{
+            background-color: #008CBA;
+            width: 100px;
+            height: 100px;
+        }
+        .box.hhh{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+        .box.yyy{
+            background-color: greenyellow;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="box red"></div>
+<div class="box red"></div>
+
+<script src="jquery.min.js"></script>
+<script>
+    //三秒后把红色边橙色
+    setTimeout(function (){
+        //js
+        // var box = document.querySelector(".box");
+        // //属性操作
+        // // box.setAttribute("class","box hhh");
+        // //class操作
+        // // box.className = "box hhh";
+        //
+        // box.classList.remove("red");
+        // box.classList.add('hhh');
+
+        //jQuery
+        //常规
+        // $('.box').attr("class","box hhh");
+        //匿名方法,function (index,old),其中第一个形参是角标，第二个参数是class内容，第二个参数可省略
+        $('.box').attr("class",function (index,old){
+            switch (index){
+                case 0: return "box hhh" ;
+                case 1: return "box yyy" ;
+            }
+        })
+
+    },1000)
+
+
+</script>
+</body>
+</html>

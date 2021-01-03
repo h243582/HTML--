@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: 微软雅黑, serif;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        i {
+            position: relative;
+            top: -5px;
+            left: 3px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button input:first-child{
+            height: 100px;
+            width: 35px;
+            position: fixed;
+            top: 150px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #E0B755;
+            color: #9E5200;
+            border: none;
+            font-size: 16px;
+        }
+
+        .button input:nth-child(2) {
+            height: 50px;
+            width: 35px;
+            position: fixed;
+            top: 260px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #159DEA;
+            color: white;
+            border: none;
+            font-size: 16px;
+
+        }
+
+        .button input:nth-child(3) {
+            height: 110px;
+            width: 35px;
+            position: fixed;
+            top: 320px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #159DEA;
+            color: white;
+            border: none;
+            font-size: 16px;
+
+        }
+
+        .button input:hover {
+            box-shadow: 0 0 5px 1px #008CBA;
+        }
+
+        .bg {
+            height: 1080px;
+            position: absolute;
+        }
+
+        .j1 {
+            border: 3px solid #EEEEEE;
+            background-color: #ffffff;
+            width: 414px;
+            height: 316px;
+            position: absolute;
+            left: 60%;
+            top: 23%;
+        }
+
+        .j1 table {
+            height: 270px;
+            width: 374px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .j1 table tr:first-child th {
+            font-size: 21px;
+            font-family: 方圆准圆体, serif;
+        }
+
+        .j1 table tr:nth-child(2) th {
+            color: #B2B2B2;
+            font-family: 方圆准圆体, serif;
+        }
+
+        .j1 table tr:nth-child(2) th a {
+            color: #3481CF;
+            font-family: 方圆准圆体, serif;
+        }
+
+        .j1 table input {
+            width: 80%;
+            height: 40px;
+            border: 2px solid #B2B2B2;
+            border-radius: 5px;
+        }
+
+        .j1 table tr:nth-child(3) th input, .j1 table tr:nth-child(4) th input {
+        }
+
+        .j1 table tr:nth-child(5) th input {
+            background-color: #86CE2F;
+            color: white;
+        }
+
+        .j1 table tr:nth-child(5) th input:hover {
+            box-shadow: 0 0 5px #008CBA;
+        }
+
+        .j1 div {
+            margin-top: 20px;
+            margin-left: 200px;
+        }
+
+        .j1 div ul li {
+            float: left;
+            font-size: 12px;
+            margin-left: 5px;
+            color: #B2B2B2;
+        }
+
+        /*图片位置*/
+        .s {
+            position: absolute;
+            top: 960px;
+            left: 180px;
+            font-size: 18px;
+            width: 1150px;
+        }
+        .s>div{
+            float: left;
+            margin: 1px;
+        }
+        .s>div>div{
+            position: relative;
+            top: -50px;
+            text-align: center;
+        }
+        .s>div:first-child {
+            background-image: url("实验1素材/s1.jpg");
+            background-size: 763px 381px;
+            height: 381px;
+            width: 763px;
+            color: white;
+            text-align: center;
+        }
+        .s>div:first-child span{
+            position: relative;
+            top: 90%;
+        }
+        .s div:nth-child(2),.s div:nth-child(4),.s div:nth-child(5),.s div:nth-child(7),.s div:nth-child(8),.s div:nth-child(9),.s div:nth-child(11),.s div:nth-child(12){
+            width: 381px;
+            height: 381px;
+        }
+        .s div:nth-child(3){
+            width: 381px;
+            height: 763px;
+        }
+        .s div:nth-child(6){
+            width: 763px;
+            height: 381px;
+        }
+        .s div:nth-child(10){
+            width: 763px;
+            height: 763px;
+        }
+        .s>div>img,.s video{
+            filter:grayscale(100%);
+        }
+        .s img:hover,.s video:hover{
+            filter:grayscale(0%);
+        }
+        .s div{
+            transform: rotateY(0deg) rotateX(0deg);
+            transition: all 0.6s;/*表示所有的属性变化在0.6s的时间段内完成。*/
+        }
+
+        .s div:hover{
+            transform: rotateY(20deg) rotateX(20deg);
+
+            transition: all 0.6s;/*表示所有的属性变化在0.6s的时间段内完成。*/
+
+        }
+
+        
+
+
+
+        .d1 > div:first-child {
+            width: 461px;
+            height: 101px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .d1 > div img {
+            margin-left: 320px;
+        }
+
+        .d1 > div:nth-child(2) {
+            width: 80%;
+            height: 101px;
+            /*background-color: #BDC3CF;*/
+            position: absolute;
+            left: 421px;
+        }
+
+        .d1 > div:nth-child(2) > div:first-child {
+            /*QQ空间*/
+            margin-left: 10px;
+            margin-top: 30px;
+            font-size: 32px;
+            color: white;
+            float: left;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) {
+            margin-left: 300px;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li {
+            /*导航*/
+            float: left;
+            margin-left: 60px;
+            margin-top: 35px;
+            font-size: 22px;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li a {
+            color: #8C8C8C;
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li a:hover {
+            background-color: greenyellow;
+            text-decoration: none;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul:first-child > li:first-child > a {
+            color: black;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li > ul {
+            color: black;
+            background-color: aliceblue;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li ul {
+            display: none;
+        }
+
+        .d1 > div:nth-child(2) > div:nth-child(2) > ul > li:hover ul {
+            display: block;
+        }
+
+        /*第二组*/
+        .d2 {
+            background-color: #FFCB04;
+            /*height: 490px;*/
+            width: 100%;
+        }
+
+        .space1 {
+            height: 979px;
+        }
+
+        /*    d4*/
+        .d4 table {
+            margin-top: 800px;
+            margin-left: 15%;
+            width: 1100px;
+            text-align: left;
+        }
+
+        .d4 table img {
+            margin: 20px;
+            float: left;
+        }
+
+        .d4 table div {
+            margin-top: 20px;
+            color: #D1C7CA;
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .d4 table th {
+            font-size: 14px;
+        }
+
+        .d4 table th:nth-child(2) {
+            position: relative;
+            left: 60px;
+            top: -20px;
+        }
+
+        /*d6*/
+        .d6 div:first-child, .d7 div:first-child {
+            margin-top: 5%;
+            margin-left: 15%;
+        }
+
+        .d6 li, .d7 li {
+            float: left;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+
+        .d6 div:nth-child(2), .d7 div:nth-child(2) {
+            margin-left: 40%;
+        }
+
+        .d6, .d6 a {
+            color: #D2B19C;
+        }
+
+        .d7, .d7 a {
+            height: 150px;
+            background-color: #F3F3F3;
+            color: #D2B19C;
+        }
+    </style>
+    <style>
+        .wrap {
+            width: 100%;
+            height: 640px;
+            position: absolute;
+        }
+
+        .list {
+            width: 100%;
+            list-style: none;
+            background-color: green;
+            position: relative;
+            padding-left: 0px;
+        }
+
+        .item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 80px;
+            opacity: 0;
+            transition: all 3s;
+        }
+
+        .btn {
+            width: 40px;
+            height: 70px;
+            color: antiquewhite;
+            font-size: 30px;
+            background-color:transparent;
+            border-color: antiquewhite;
+            /*border-style:none;*/
+            border-radius: 4px;
+            position: absolute;
+            top: 250px;
+            z-index: 100;
+        }
+
+        #gopPre {
+            left: 0px;
+        }
+
+        #goNext {
+            right: 0px;
+        }
+
+        .item.active {
+            z-index: 10;
+            opacity: 1;
+        }
+
+        /*    列表圆圈*/
+        .pointList {
+            padding-left: 0px;
+            list-style: none;
+            position: absolute;
+            right: 50px;
+            bottom: 25px;
+            z-index: 1000;
+        }
+
+        .point {
+            width: 15px;
+            height: 15px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 100%; /*变成圆*/
+            float: left;
+            margin-right: 20px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .point.active {
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="overflow-x: hidden">
+<div class="button">
+    <input type="button" value="黄钻特权">
+    <input type="button" value="分享">
+    <input type="button" value="外团招募">
+
+</div>
+
+<div class="bg">
+    <img src="实验1素材/bg.jpg" alt="" width="100%">
+</div>
+<div class="d1">
+    <div>
+        <div><img src="实验1素材/star.png">
+        </div>
+    </div>
+    <!--        <p>分 享 生 活;留 住 感 动</p>-->
+    <div>
+        <div>QQ空间</div>
+        <div>
+            <ul>
+                <li>
+                    <a href="">首页<i class=" fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="">表单1</a></li>
+                        <li><a href="">表单2</a></li>
+                        <li><a href="">表单3</a></li>
+                        <li><a href="">表单4</a></li>
+                        <li><a href="">表单5</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="F:\WebStorm_se\HTML学习\U+实验\实验2\实验2.html">黄钻特权<i class=" fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="">表单1</a></li>
+                        <li><a href="">表单2</a></li>
+                        <li><a href="">表单3</a></li>
+                        <li><a href="">表单4</a></li>
+                        <li><a href="">表单5</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">下载<i class=" fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="">表单1</a></li>
+                        <li><a href="">表单2</a></li>
+                        <li><a href="">表单3</a></li>
+                        <li><a href="">表单4</a></li>
+                        <li><a href="">表单5</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">联系我们<i class=" fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="">表单1</a></li>
+                        <li><a href="">表单2</a></li>
+                        <li><a href="">表单3</a></li>
+                        <li><a href="">表单4</a></li>
+                        <li><a href="">表单5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="space1"></div>
+
+<div class="j1">
+    <table>
+        <tr>
+            <th width="268">帐号密码登录</th>
+        </tr>
+        <tr>
+            <th width="268">
+                推荐使用<a href="">快速安全登录</a>，防止盗号。
+            </th>
+        </tr>
+        <tr>
+            <th width="268">
+                <form action="">
+                    <input type="text" placeholder="支持QQ号/邮箱/手机号登录">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <th width="268">
+                <form action="">
+                    <input type="password" placeholder="密码">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <th width="268">
+                <form action="">
+                    <input type="button" value="登录">
+                </form>
+            </th>
+        </tr>
+    </table>
+    <div>
+        <ul>
+            <li><a href="">忘了密码？</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">注册新帐号</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">意见反馈</a></li>
+        </ul>
+    </div>
+</div>
+<div CLASS="s">
+    <div>
+        <span>LPL x QQ x PUPU英雄联盟企鹅联名来袭</span>
+    </div>
+    <div>
+        <img src="实验1素材/s2.jpg" alt="" height="381px">
+        <div>QTX潮玩展 | 艺展美陈空间设计揭秘</div>
+    </div>
+    <div>
+        <video controls width="381px" height="763px">
+            <source src="实验1素材/s3.mp4">
+        </video>
+        <div>QQfamily</div>
+    </div>
+    <div>
+        <img src="实验1素材/s4.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="实验1素材/s5.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+    <img src="实验1素材/s6.jpg" alt="" width="763px">
+    <div></div>
+</div>
+    <div>
+        <img src="实验1素材/s7.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="实验1素材/s8.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="实验1素材/s9.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <img src="实验1素材/s10.jpg" alt="" width="763px">
+        <div></div>
+    </div>
+    <div>
+        <img src="实验1素材/s11.jpg" alt="" width="381px">
+        <div></div>
+    </div>
+    <div>
+        <spen><img src="实验1素材/s12.jpg" alt="" width="381px"></spen>
+        <div></div>
+    </div>
+
+
+
+</div>
+<div style="height: 2300px"></div>
+
+<div class="wrap">
+    <ul class="list">
+        <li class="item active"><a href=""><img src="实验1素材/zl1.jpg" alt="" width="100%"></a></li>
+        <li class="item"><a href=""><img src="实验1素材/zl2.jpg" alt="" width="100%"></a></li>
+        <li class="item"><a href=""><img src="实验1素材/zl3.jpg" alt="" width="100%"></a></li>
+    </ul>
+    <ul class="pointList">
+        <li class="point active" data-index='0'></li>
+        <li class="point" data-index='1'></li>
+        <li class="point" data-index='2'></li>
+    </ul>
+    <button type="button" class="btn" id="goPre"><i class="fa fa-chevron-left"></i></button>
+    <button type="button" class="btn" id="goNext"><i class="fa fa-chevron-right"></i></button>
+</div>
+<script>
+    var items = document.getElementsByClassName('item');
+    var points = document.getElementsByClassName('point')
+    var goPreBtn = document.getElementById('goPre');
+    var goNextBtn = document.getElementById('goNext');
+    var index = 0;//图片在几张图片显示，第index张图片有active这个类名
+    var time = 0;//定时器
+    /**
+     * index是多少就显示哪个图片
+     */
+    var goIndex = function () {
+        for (var i = 0; i < items.length; i++) {
+            items[i].className = 'item';
+            points[i].className = "point";
+        }
+        items[index].className = 'item active';
+        points[index].className = 'point active';
+    }
+
+    var goNext = function () {
+        index++;
+        if (index === 3) {
+            index = 0;
+        }
+        goIndex();
+    }
+
+    var goPre = function () {
+        index--;
+        if (index === -1) {
+            index = 2;
+        }
+        goIndex();
+    }
+    goNextBtn.addEventListener('click', function () {
+        goNext();
+        time = 0;
+    });
+    goPreBtn.addEventListener('click', function () {
+        goPre();
+        time = 0;
+    });
+    //    点击点
+    for (var i = 0; i < points.length; i++) {
+        points[i].addEventListener('click', function () {
+            var pointIndex = this.getAttribute('data-index');
+            index = pointIndex;
+            goIndex();
+            time = 0;
+        });
+    }
+
+    //定时器自动轮播，点击时取消定时器
+    setInterval(function () {
+        time++;
+        if (time === 20) {
+            goNext();
+            time = 0;
+        }
+    }, 100);
+
+
+</script>
+<div class="d4">
+    <div>
+        <table height="88px">
+            <tr>
+                <th width="450"><img src="实验1素材/ewm.png" alt="">
+                    <div>二维码扫描获取链接</div>
+                    用二维码扫描软件拍摄二维码,可直接下载QQ空间。
+                </th>
+                <th width="450">
+                    <div>手机浏览器下载链接</div>
+                    打开手机浏览器，输入以下地址访问<br>
+                    <form action="">
+                        <input type="text" value="http://z.qzone.qq.com">
+                    </form>
+                </th>
+                <th width="450">
+                    <div>一键安装 (Android)</div>
+                    通过应用宝进行一键安装<br><img
+                        src="https://h5.qzone.qq.com/tx_tls_gate=img2.sj.qq.com/res/sj.qq.com/official2/images/api/api7.png">
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="d6">
+    <div>
+        <ul>
+            <li>友情链接：</li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">QQ官网下载</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">QQ音乐</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯微云</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯视频</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯电脑管家</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯手机管家</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯云</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">全民K歌</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">企鹅FM</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">画报</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">星钻</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">QQ空间黄钻活动</a></li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="d7">
+    <div>
+        <ul>
+            <li><a href="">关于腾讯</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">About Tencent</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">服务协议</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">开放平台</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">广告服务</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">商务洽谈</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯招聘</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯公益</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">客服中心</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">网站导航</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">版权所有</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">ABCmouse腾讯版</a></li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+    <div align="center">Copyright © 1998 - 2020 Tencent. <a
+            href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">All Rights Reserved.</a></div>
+</div>
+</body>
+</html>

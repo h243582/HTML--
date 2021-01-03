@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="myDiv" class="box">Hello jQuery，欢迎光临漫步时尚广场！</div>
+<div class="box">何昱飞</div>
+
+<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //DOM对象转成jQuery对象
+    //获得DOM对象
+    var domObject=document.getElementById("myDiv");
+    //获得DOM对象中的innerHTML属性值
+    // alert(domObject.innerHTML);
+    //将DOM对象转换成jQuery对象
+    var jQueryObject=$(document.getElementById("myDiv"));
+    //调用jQuery对象的html()方法
+    // alert(jQueryObject.html());
+
+    //jQuery对象转成DOM对象
+    //获得jQuery对象（由页面中所有的DIV构成）
+    var jQueryObject=$("div");
+    //1. 通过下标获取DOM对象
+    var domObject1=jQueryObject[0];
+    //2. 通过get()方法获取DOM对象
+    var domObject2=jQueryObject.get(0);
+    //获得DOM对象中的innerHTML属性值
+    // alert("第一个DIV内容是："+domObject1.innerHTML+"\n第二个DIV内容是："+domObject2.innerHTML);
+
+    //获取box的DOM
+var box1 = document.querySelector('.box');
+var box2 = document.getElementsByClassName('box')[1];
+//获取box 的jQuery的对象
+var jbox = $(box1);
+console.log('01-'+jbox.html());
+var jbox = $(box2);
+console.log('02-'+jbox.html());
+
+var box=$('.box');
+    console.log('2'+box[0].innerHTML);
+
+var $box3=$('.box');
+console.log('3'+$box3.html());
+
+var box4=$('.box');
+console.log('4'+box4[0].innerHTML);//jQuery对象转换为DOM对象
+console.log('5'+box4.get(0).innerHTML);//同上
+</script>
+    </body>
+</html>

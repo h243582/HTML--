@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a;var b=null;var c=20;
+
+    function add(a,b){
+        var sum= 0;
+
+        for (var i in arguments) {
+            sum+=arguments[i];
+        }
+        document.writeln(sum);
+    }
+        add(1,2,3,4,5);
+
+    //匿名
+    var num = function (a,b){
+        return a+b;
+    }
+    document.writeln(num(2,3));
+
+    //
+    var f1 = new Function('a','b','return a+b');
+    document.writeln(f1(4,4));
+
+    //自调函数
+    (function (a,b){
+        return a+b;
+    })(2,2);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

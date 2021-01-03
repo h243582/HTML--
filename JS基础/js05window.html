@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="myButton" height="100" width="200">
+<script>
+    var by = document.getElementById("myButton");
+
+    // by.onmouseover = function (){
+    //     setTimeout(myButton,500);
+    //     myButton = function (){
+    //         document.writeln("111111");
+    //         document.writeln("111111");
+    //         alert("移到了上面");
+    //
+    //     }
+    // }
+
+        setTimeout(function (t) {
+            return document.getElementById("myButton");
+        }, 500);
+        myButton = function () {
+            document.writeln("111111");
+            document.writeln("111111");
+            alert("移到了上面");
+        }
+
+
+
+</script>
+</body>
+</html>

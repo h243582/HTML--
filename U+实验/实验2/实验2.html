@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        .d1 {
+            /*黑色背景*/
+            background-color: #2B2B2B;
+            height: 83px;
+            /*width: 2000px;*/
+        }
+
+        .d1 div:first-child {
+            /*黄钻贵族位置大小*/
+            width: 260px;
+            height: 83px;
+            position: absolute; /*不换行*/
+            left: 0px;
+            text-indent: 50px;
+        }
+
+        .d1 div:first-child img {
+            /*黄钻贵族图标*/
+            vertical-align: middle;
+        }
+
+        .d1 div:first-child a {
+            /*黄钻贵族字*/
+            color: #FFFFFF;
+            font-family: 方圆准圆体, serif;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .d1 div:first-child a:hover {
+            /*鼠标移上去时*/
+            background-color: #6e6e6e;
+        }
+
+        .d1 div:nth-child(2) table {
+            /*导航栏大小位置*/
+            width: 1000px;
+            position: absolute; /*不换行*/
+            left: 300px;
+
+        }
+
+        .d1 div:nth-child(2) table th a {
+            /*导航栏字*/
+            color: #FFFFFF;
+            text-decoration: none; /*不要下划线*/
+
+        }
+
+        .d1 div:nth-child(2) a:hover {
+            /*鼠标移上去时*/
+            background-color: #6e6e6e;
+        }
+
+        .d1 div:nth-child(2) td {
+            /*登录左边的字*/
+
+            /*width: 250px;*/
+            color: #797979;
+        }
+
+        .d1 div:nth-child(2) td a {
+            /*现在登录的字*/
+            color: #F6B81D;
+            text-decoration: none;
+        }
+
+        .space1 {
+            /*一条黄横线*/
+            width: 100%;
+            height: 5px;
+            background-color: #FDDA19;
+        }
+
+        .space2 {
+            /*中间空白处*/
+            width: 100%;
+            height: 650px;
+            background-image: url("实验2素材/111.jpeg");
+            position: absolute;
+            left: 0px;
+        }
+
+        .space3 {
+            /*登录处*/
+            margin-top: 60px;
+            /*line-height: 580px;*/
+            background-color: #FDDA19;
+            height: 460px;
+            width: 305px;
+            position: absolute;
+            left: 70%;
+        }
+
+        .space3 table {
+            margin-top: 20px;
+        }
+
+        .space3 tr:first-child th, .space3 tr:nth-child(2) th {
+            /*登录和黄钻的大小*/
+            height: 50px;
+            width: 300px;
+            font-size: 18px;
+            border: 1px solid black;
+        }
+
+        .space3 tr:first-child th a {
+            /*立即登录字*/
+            color: #812A13;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .space3 tr:nth-child(2) th {
+            /*黄钻贵族背景*/
+            background-color: #A55011;
+        }
+
+        .space3 tr:nth-child(2) th a {
+            /*黄钻贵族字*/
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .space3 tr:first-child th:hover, .space3 tr:nth-child(2) th:hover {
+            background-color: #F4D556;
+        }
+
+        .space3 tr:nth-child(2) th:hover {
+            background-color: #AB5E12;
+        }
+
+        .space3 tr:nth-child(3) th {
+            /*第三行空白*/
+            height: 150px;
+        }
+
+        .space3 tr:nth-child(4) th {
+            /*黄钻贵族为您提供*/
+            font-size: 13px;
+        }
+
+        .space3 tr:nth-child(4) th a {
+            /*查看所有*/
+            font-size: 8px;
+            text-decoration: none;
+        }
+
+        .space3 tr:nth-child(4) th a:hover {
+            /*鼠标移至查看所有时加下划线*/
+            text-decoration: underline;
+        }
+
+        .space3 tr:nth-child(5) th a {
+            font-size: 8px;
+            text-decoration: none;
+            font-family: inherit;
+            color: #812A13;
+        }
+
+        .space3 tr:nth-child(5) th :hover {
+            text-decoration: underline;
+        }
+
+        .space4 {
+            /*空白*/
+            height: 640px;
+        }
+
+        /*第二部分*/
+        h1 {
+            font-family: 方圆准圆体, serif;
+            height: 70px;
+            width: 160px;
+            line-height: 60px;
+            margin-left: 150px;
+        }
+
+        h4 {
+            font-family: 楷体, serif;
+            height: 70px;
+            line-height: 70px;
+        }
+
+        .d2 {
+            margin-top: 60px;
+        }
+
+        .d2 div:first-child div:first-child {
+            float: left;
+        }
+
+        /*.d2 > div:nth-child(2) {*/
+        /*    background-color: #ECF7FA;*/
+        /*}*/
+
+        /*.d2 div:nth-child(2) img {*/
+        /*    margin-left: 200px;*/
+        /*    margin-top: 40px;*/
+        /*}*/
+
+        /*.d2 div:nth-child(2) ul li div {*/
+        /*    margin-left: 300px;*/
+        /*}*/
+
+        /*    d3*/
+        .d3 div:first-child {
+            margin-top: 60px;
+        }
+
+        .d3 div:first-child h1 {
+            float: left;
+        }
+
+        .d3 > div:nth-child(2) {
+            margin-left: 10%;
+        }
+
+        /*d4*/
+        .d4 table {
+            margin-top: 60px;
+            margin-left: 10%;
+            border: 1px solid aliceblue;
+            font-size: 14px;
+            height: 80px;
+            width: 1100px;
+            text-align: left;
+        }
+
+        .d4 img {
+            float: left;
+        }
+
+        .d4 a {
+            margin-left: 10px;
+        }
+
+        /*    d5*/
+        .d5 {
+            margin-top: 100px;
+            margin-left: 40%;
+        }
+
+        /*d6*/
+        .d6 div:first-child {
+            margin-top: 5%;
+            margin-left: 15%;
+        }
+
+        .d6 li {
+            float: left;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+
+        .d6 div:nth-child(2) {
+            margin-left: 40%;
+        }
+        /*加的内容*/
+        .add1{
+            margin-top: 800px;
+            width: 100%;
+        }
+    </style>
+
+    <style>
+        .wrap {
+            width: 100%;
+            height: 650px;
+            position: absolute;
+        }
+
+        .list {
+            width: 100%;
+            list-style: none;
+            position: relative;
+        }
+
+        .item {
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 30px;
+            opacity: 0;
+            transition: all 3s;
+            position: absolute;
+        }
+        .font{
+            position: absolute;
+            top: 450px;
+            left: 30%;
+            text-align: center;
+
+        }
+
+        .btn {
+            width: 40px;
+            height: 70px;
+            color: antiquewhite;
+            font-size: 30px;
+            background-color:transparent;
+            border-color: antiquewhite;
+            /*border-style:none;*/
+            border-radius: 4px;
+            position: absolute;
+            top: 250px;
+            z-index: 100;
+        }
+
+        #gopPre {
+            left: 0px;
+        }
+
+        #goNext {
+            right: 0px;
+        }
+
+        .item.active {
+            z-index: 10;
+            opacity: 1;
+        }
+
+        /*    列表圆圈*/
+        .pointList {
+            padding-left: 0px;
+            list-style: none;
+            position: absolute;
+            right: 50px;
+            bottom: 25px;
+            z-index: 1000;
+        }
+
+        .point {
+            width: 15px;
+            height: 15px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 100%; /*变成圆*/
+            float: left;
+            margin-right: 20px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .point.active {
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body style="overflow-x: hidden">
+
+<div class="d1">
+    <div>
+        <img src="实验2素材/黄钻.png " width="83px" height="83px"><a href="ss">黄钻贵族</a></img>
+    </div>
+    <div>
+        <table height="83px" cellspacing="20px">
+            <tr>
+                <th><a href="">首页</a></th>
+                <th><a href="">年费黄钻</a></th>
+                <th><a href="">游戏特权</a></th>
+                <th><a href="">特权与等级</a></th>
+                <th><a href="">黄钻活动</a></th>
+                <th><a href="">黄钻豪华版</a></th>
+                <th width="200"><a href=""></a></th>
+                <td>您还没有登录，<a href="javascript:;">马上登录</a></td>
+        </table>
+    </div>
+
+</div>
+<div class="space1"></div>
+<div class="space2"></div>
+<div class="space3">
+    <!--    <div align="center">用户登录</div>-->
+    <table cellspacing="20px">
+        <tr>
+            <th colspan="4">&nbsp;<a href=""><i class=" fa fa-user-circle-o"></i>用户登录</a></th>
+        </tr>
+        <tr>
+            <th colspan="4">&nbsp;<a href=""><i class=" fa fa-diamond"></i>开通黄钻</a></th>
+        </tr>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
+            <th colspan="4">黄钻贵族为您提供：&nbsp; &nbsp; &nbsp; <a href="https://vip.qzone.qq.com/priv/">查看所有<i
+                    class=" fa fa-location-arrow"></i></a></th>
+        </tr>
+        <tr>
+            <th><a href=""><img src="实验2素材/装扮特权.png" alt="" height="30" width="36"><br>装扮特权</a></th>
+            <th><a href=""><img src="实验2素材/功能特权.png" alt="" height="30" width="36"><br>功能特权</a></th>
+            <th><a href=""><img src="实验2素材/生活特权.png" alt="" height="30" width="36"><br>生活特权</a></th>
+            <th><a href=""><img src="实验2素材/游戏特权.png" alt="" height="30" width="36"><br>游戏特权</a></th>
+        </tr>
+    </table>
+</div>
+<div class="space4"></div>
+<!--第二块-->
+<div class="d2">
+    <div>
+        <div><h1>特效装扮</h1></div>
+        <div><h4>每月推出上百款新品套装，商城万件装扮让你换不停！</h4></div>
+    </div>
+    <div class="wrap">
+        <ul class="list">
+            <li class="item active">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="实验2素材/装扮特权1.gif "
+                                                                                             alt="" width="100%" height="650"></a>
+                <div class="font">怎么从良<br>7793600人 在穿</div>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="实验2素材/装扮特权2.gif"
+                                                                                             alt="" width="100%" height="650"></a>
+                <div class="font">艰难过一生<br>5626302人 在穿</div>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="实验2素材/装扮特权3.gif" alt="" width="100%" height="650"></a>
+                <div class="font">大人讲利弊<br>1562301人 在穿
+                </div>
+            </li>
+            <li class="item">
+                <a href="https://rc.qzone.qq.com/main/mall?target=41&tryOnItems=102137"><img src="实验2素材/装扮特权4.gif"
+                                                                                             alt="" width="100%" height="650"></a>
+                <div class="font">海鸟<br>1889912人 在穿</div>
+            </li>
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index='0'></li>
+            <li class="point" data-index='1'></li>
+            <li class="point" data-index='2'></li>
+            <li class="point" data-index='3'></li>
+        </ul>
+        <button type="button" class="btn" id="goPre"><i class="fa fa-chevron-left"></i></button>
+        <button type="button" class="btn" id="goNext"><i class="fa fa-chevron-right"></i></button>
+    </div>
+</div>
+<script>
+    var items = document.getElementsByClassName('item');
+    var points = document.getElementsByClassName('point')
+    var goPreBtn = document.getElementById('goPre');
+    var goNextBtn = document.getElementById('goNext');
+    var index = 0;//图片在几张图片显示，第index张图片有active这个类名
+    var time = 0;//定时器
+    /**
+     * index是多少就显示哪个图片
+     */
+    var goIndex = function () {
+        for (var i = 0; i < items.length; i++) {
+            items[i].className = 'item';
+            points[i].className = "point";
+        }
+        items[index].className = 'item active';
+        points[index].className = 'point active';
+    }
+
+    var goNext = function () {
+        index++;
+        if (index === 4) {
+            index = 0;
+        }
+        goIndex();
+    }
+
+    var goPre = function () {
+        index--;
+        if (index === -1) {
+            index = 3;
+        }
+        goIndex();
+    }
+    goNextBtn.addEventListener('click', function () {
+        goNext();
+        time = 0;
+    });
+    goPreBtn.addEventListener('click', function () {
+        goPre();
+        time = 0;
+    });
+    //    点击点
+    for (var i = 0; i < points.length; i++) {
+        points[i].addEventListener('click', function () {
+            var pointIndex = this.getAttribute('data-index');
+            index = pointIndex;
+            goIndex();
+            time = 0;
+        });
+    }
+
+    //定时器自动轮播，点击时取消定时器
+    setInterval(function () {
+        time++;
+        if (time === 20) {
+            goNext();
+            time = 0;
+        }
+    }, 100);
+
+
+</script>
+<div class="add1">
+    <img src="实验2素材/add1.png" alt="">
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1">-->
+<!--                    <div></div><div></div>-->
+<!--                </div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>-->
+<!--                <div class="aaa1"></div>-->
+<!--                <div class="aaa2"></div>-->
+<!--                <div class="aaa3"></div>-->
+<!--            </th>-->
+<!--        </tr>-->
+<!--    </table>-->
+
+</div>
+
+<div class="d3">
+    <div>
+        <div><h1>功能特权</h1></div>
+        <div><h4> 更大相册容量，丰富日志信纸，数十种使用特权</h4></div>
+    </div>
+    <div>
+        <table cellspacing="30px">
+            <tr>
+                <th rowspan="2"><a
+                        href="https://qzs.qzone.qq.com/qzone/v6/v6_config/vip_promotion/comic/mh.bnsmimi.zsite.html"><img
+                        src="实验2素材/功能特权1.webp" alt=""></a></th>
+                <th rowspan="2"><a
+                        href="https://qzs.qzone.qq.com/qzone/v6/v6_config/vip_promotion/comic/mh.bnsmimi.zsite.html"><img
+                        src="实验2素材/功能特权2.webp" alt=""></a></th>
+                <th rowspan="2"><a
+                        href="https://qzs.qzone.qq.com/qzone/v6/v6_config/vip_promotion/comic/mh.bnsmimi.zsite.html"><img
+                        src="实验2素材/功能特权3.webp" alt=""></a></th>
+                <th width="100"><a href="https://vip.qzone.qq.com/priv/1/"><img src="实验2素材/功能特权4.webp"
+                                                                                alt=""><br>尊贵身份</a><br></th>
+                <th width="100"><a href="https://vip.qzone.qq.com/game_privilege/"><img src="实验2素材/功能特权5.webp"
+                                                                                        alt=""><br>游戏特权</a><br></th>
+            </tr>
+            <tr>
+                <th width="100"><a href="https://vip.qzone.qq.com/priv/7/"><img src="实验2素材/功能特权6.webp"
+                                                                                alt=""><br>装扮特权</a><br></th>
+                <th width="100"><a href="http://v.qzone.qq.com/priv_all"><img src="实验2素材/功能特权7.webp" alt=""><br>更多特权</a><br>
+                </th>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!--第四块-->
+<div class="d4">
+    <table>
+        <tr>
+            <th><img src="实验2素材/黄钻2.png" alt=""><br>
+                <a href="https://user.qzone.qq.com/88882222/blog/1336958380">黄钻认证空间<br>至尊特权，玩转精彩</a></th>
+            <th><img src="实验2素材/黄钻微博.png" alt=""><br>
+                <a href="https://e.t.qq.com/vip_qzone">黄钻官方微博<br>空间换装扮，心随你动！</a></th>
+            <th><img src="实验2素材/QQ公众号.png" alt=""><br>
+                &nbsp;&nbsp;微信关注订阅号<br>&nbsp;&nbsp;最新黄钻特权，抢先知！
+            </th>
+            <th><img src="实验2素材/QQ公众号.png" alt=""><br>
+                &nbsp;&nbsp;手Q扫扫看<br>&nbsp;&nbsp;关注公众号，有惊喜！
+            </th>
+        </tr>
+    </table>
+</div>                                              ？             ？？？？？？？？？？？？？？
+
+<div class="d5"><img src="实验2素材/腾讯.png" alt=""></div>
+<div class="d6">
+    <div>
+        <ul>
+            <li><a href="">关于腾讯</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">About Tencent</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">服务协议</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">开放平台</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">广告服务</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">商务洽谈</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯招聘</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">腾讯公益</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">客服中心</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">网站导航</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">版权所有</a></li>
+        </ul>
+        <ul>
+            <li>|</li>
+        </ul>
+        <ul>
+            <li><a href="">ABCmouse腾讯版</a></li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+    <div align="center">Copyright © 1998 - 2020 Tencent. <a
+            href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">All Rights Reserved.</a></div>
+
+</div>

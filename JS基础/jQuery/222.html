@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.0/core.js"></script>
+
+</head>
+<body>
+<div style="margin-top:10px;width:170px;height:150px;font-size:12px;">
+    <div style="margin-bottom:20px;">
+        <input type="radio" value="0" name="resource" checked/> 选择本地对象</div>
+    <div style="margin-bottom:20px;">
+        <input type="radio" value="1" id="browserBtn" name="resource"/>选择服务器对象</div>
+    <div id="selectSourceBtn">
+        <input type="radio" value="2" name="resource"/> 选择资源对象</div>
+</div>
+
+<div id="toolbar" class="schedule-taskmanage-rbtn" style="width:98%">
+    <button οnclick="closeAddObj()">取消</button>
+    <button οnclick="chooseAddObj()">选择</button>
+</div>
+
+<script>
+    function chooseAddObj() {
+        var resource = $('input[name="resource"]:checked').val();
+        if (resource == '0') {//选择本地对象
+            beginUpload();
+        } else if (resource == '1') {//选择服务器对象
+            openAddServerFile();
+        } else if (resource == '2') {//选择资源对象
+            chooseRes();
+        }
+    }
+</script>
+</body>
+</html>

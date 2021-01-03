@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        fieldset{
+            color: aqua;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<form action="http://www.baidu.com">
+    <input type="submit" value="提交按钮">
+
+    <input type="reset" value="重置">
+
+    <input type="button" value="正常按钮">
+
+    <p>-------------------</p>
+</form>
+<fieldset>
+    <legend>请选择</legend>
+<form action="">
+    <button type="submit" value="提交内容">提交内容 </button>
+    <button type="reset" value="重置内容">重置内容 </button>
+    <button type="button" value="普通按钮"
+            onclick="alert('可以调用JavaScript脚本!')">普通按钮 </button>
+    <button type="submit" value="提交内容">
+        <img src="../images/submit.jpg" width="100"/>
+    </button>
+
+</form>
+</fieldset>
+</body>
+</html>

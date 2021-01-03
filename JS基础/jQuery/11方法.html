@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+  <style>
+    .box{
+      /*border: #9E5200 solid 2px;*/
+      margin: 20px;
+      cursor: pointer;
+      background-color: #008CBA;
+      width: 300px;
+      height: 300px;
+    }
+    .box.box2{
+      /*display: none;*/
+      height: 0px;
+      transition: .3s;
+
+    }
+    .box.box2.actw{
+      height: 300px;
+      /*display: block;*/
+
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box box2"></div>
+
+<script src="jquery.min.js"></script>
+<script>
+  document.querySelector('.box').onclick = function (){
+    //js
+    // var box2 = document.querySelector(".box.box2");
+    // if (box2.className === 'box box2'){
+    //   box2.classList.add("active");
+    // }else {
+    //   box2.classList.remove("active");
+    // }
+    //jQuery
+      var $box = $('.box.box2');
+    if ($box.attr('class') === 'box box2'){
+      $box.attr('class',"box box2 actw");
+    }else {
+      $box.attr('class',"box box2");
+    }
+
+
+  }
+</script>
+
+
+
+</body>
+</html>

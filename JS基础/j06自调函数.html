@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 15px;
+            background-color: red;
+            cursor: pointer;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="box">0</div>
+<div class="box">1</div>
+<div class="box">2</div>
+
+<script>
+    var box = document.querySelectorAll(".box");
+    console.log(box);
+    //自调函数
+    // for(var i=0;i<box.length;i++){
+    //     (function (i){
+    //         box[i].onclick = function(){
+    //             console.log(box[i],i);
+    //         }
+    //     })(i);
+    // }
+
+    //foreach函数
+    box.forEach(function (item,index){
+       item.onclick = function (){
+           console.log(item,index);
+       }
+    });
+
+</script>
+</body>
+</html>
